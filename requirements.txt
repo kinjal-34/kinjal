@@ -9,6 +9,6 @@
 
 
  # import snowflake.connector
-my_cnx == snowflake.connector.connect(**streamlit.secrets["snowflake"])
-
+# my_cnx == snowflake.connector.connect(**streamlit.secrets["snowflake"])
+'/home/appuser/venv/bin/python -m pip install --upgrade pip'
 
