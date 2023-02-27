@@ -108,3 +108,5 @@ streamlit.dataframe(my_data_rows)
 #allow to end user to add the fruit to the list
 add_my_fruit = "jackfruit"
 
+#allow to end user to add the fruit to the list
+add_my_fruit = "jackfruit"
