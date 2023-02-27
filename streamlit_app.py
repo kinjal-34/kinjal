@@ -26,7 +26,7 @@ streamlit.text('🥑🍞 Avocado toast')
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-import pandas
+#import pandas
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 streamlit.dataframe(my_fruit_list)
 my_fruit_list=my_fruit_list.set_index('Fruit')
@@ -46,13 +46,13 @@ fruits_to_show=my_fruit_list.loc[fruits_selected]      # it will gives only avoc
 streamlit.dataframe(fruits_to_show)
 
 
-import requests
+#import requests
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 #streamlit.text(fruityvice_response)
 
 #streamlit.header("Fruityvice Fruit Advice!")
 
-import requests
+#import requests
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi")
 
 
@@ -73,7 +73,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 
 
-import snowflake.connector
+#import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
@@ -132,5 +132,4 @@ streamlit.write('thanks for adding ',fruit_choice)
 #This will not work correctly,but just go with it for now
 my_cur.execute("insert into fruit_load_list values('from streamlit')")
 
-Insert into fruit_load_list (select 'test');
-#select * from fruit_load_list;
+
