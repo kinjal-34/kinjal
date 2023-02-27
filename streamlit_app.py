@@ -119,5 +119,5 @@ streamlit.dataframe(my_data_rows)
 
 fruit_choice = streamlit.text_input('what fruit would you like to add?')
 fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
-fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
-streamlit.dataframe(fruityvice_normalized)
+my_cur.execute("insert into fruit_load_list values('from streamlit')")
+streamlit.text('thanks for adding ',+fruit_choice)
