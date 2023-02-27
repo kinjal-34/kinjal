@@ -132,5 +132,5 @@ streamlit.write('thanks for adding ',fruit_choice)
 #This will not work correctly,but just go with it for now
 my_cur.execute("insert into fruit_load_list values('from streamlit')")
 
-insert into fruit_load_list(select 'test');
+insert into fruit_load_list (select 'test');
 select * from fruit_load_list;
