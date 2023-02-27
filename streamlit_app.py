@@ -117,5 +117,7 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
-
-my_cur.execute("insert into fruit_load_list values('from streamlit')")
+fruit_choice = streamlit.text_input('what fruit would you like to add?')
+fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
+fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
+streamlit.dataframe(fruityvice_normalized)
