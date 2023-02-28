@@ -90,38 +90,38 @@ streamlit.dataframe(fruityvice_normalized)
 #streamlit.text(my_data_row)
 
 
-my_data_row = my_cur.fetchone()
-streamlit.header("The fruit load list contains:")
-streamlit.dataframe(my_data_row)
+#my_data_row = my_cur.fetchone()
+#streamlit.header("The fruit load list contains:")
+#streamlit.dataframe(my_data_row)
 
 
-my_cur.execute("select * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit.header("The fruit load list contains:")
-streamlit.dataframe(my_data_rows)
+#my_cur.execute("select * from fruit_load_list")
+#my_data_rows = my_cur.fetchall()
+#streamlit.header("The fruit load list contains:")
+#streamlit.dataframe(my_data_rows)
 
 
 #allow to end user add the fruit to the list
-add_my_fruit = "jackfruit"
+#add_my_fruit = "jackfruit"
 
 
 
-my_cur.execute("select * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit.header("The fruit load list contains:")
-streamlit.dataframe(my_data_rows)
-
-#allow to end user to add the fruit to the list
-add_my_fruit = "jackfruit"
+#my_cur.execute("select * from fruit_load_list")
+#my_data_rows = my_cur.fetchall()
+#streamlit.header("The fruit load list contains:")
+#streamlit.dataframe(my_data_rows)
 
 #allow to end user to add the fruit to the list
-add_my_fruit = "jackfruit"
+#add_my_fruit = "jackfruit"
+
+#allow to end user to add the fruit to the list
+#add_my_fruit = "jackfruit"
 
 
-my_cur.execute("select * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit.header("The fruit load list contains:")
-streamlit.dataframe(my_data_rows)
+#my_cur.execute("select * from fruit_load_list")
+#my_data_rows = my_cur.fetchall()
+#streamlit.header("The fruit load list contains:")
+#streamlit.dataframe(my_data_rows)
 
 fruit_choice = streamlit.text_input('what fruit would you like to add?')
 fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
@@ -130,7 +130,7 @@ streamlit.write('thanks for adding ',fruit_choice)
 
 
 #This will not work correctly,but just go with it for now
-my_cur.execute("insert into fruit_load_list values('from streamlit')")
+#my_cur.execute("insert into fruit_load_list values('from streamlit')")
 
 streamlit.header("Fruityvice Fruit Advice!")
 try:
