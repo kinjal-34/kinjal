@@ -146,10 +146,10 @@ except URLError as e:
   
   
   #create the repeatable code block (called a function)
-  def get_fruityvice_data(this_fruit_choice):
-      fruityvise_response=requests.get("https://fruityvice.com/api/fruit/"+this_fruit_choice)
-      fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
-      return fruityvice_normalized
+def get_fruityvice_data(this_fruit_choice):
+  fruityvise_response=requests.get("https://fruityvice.com/api/fruit/"+this_fruit_choice)
+  fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
+  return fruityvice_normalized
       
 streamlit.header("Fruityvice Fruit Advice!")
 try:
@@ -160,5 +160,5 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
     
- except URLError as e:
+except URLError as e:
   streamlit.error()
