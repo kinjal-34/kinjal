@@ -147,7 +147,7 @@ streamlit.write('thanks for adding ',fruit_choice)
   
   #create the repeatable code block (called a function)
 def get_fruityvice_data(this_fruit_choice):
-  fruityvise_response=requests.get("https://fruityvice.com/api/fruit/"+this_fruit_choice)
+  fruityvise_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
   fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
   return fruityvice_normalized
       
